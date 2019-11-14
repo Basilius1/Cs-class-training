@@ -1,0 +1,47 @@
+using System;
+class MainClass 
+{
+  public static void Main (string[] args) 
+  {
+    Console.WriteLine ("Main class started\n");
+
+    // Students
+    var student1 = new Student();
+    Console.WriteLine(student1.a);
+
+    var student2 = new Student();
+    Console.WriteLine(student2.b);
+    
+    var student3 = new Student();
+    Console.WriteLine(student3.c);
+
+    // Student student4 = new Student("joopa joo");
+    // Teacher
+    var teacher = new Teacher();
+    Console.WriteLine($"Teacher: {teacher.teachername}");
+     teacher.TulostaJotain();
+    
+
+  }
+
+////////////////////////////////////////////////////////////
+
+  class Student
+  {
+      public string a = "Olli Oppija";
+      public string b = "Alli Alussa";
+      public string c = "Toope Tapio";
+      
+  }
+
+
+
+  class Teacher
+  {
+      public string teachername = "Carmen Ibarra";
+      public void TulostaJotain()
+      {
+          Console.WriteLine("Onnistuihan se");
+      }
+  }
+}
