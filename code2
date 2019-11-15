@@ -5,6 +5,7 @@ class MainClass
   {
     Console.WriteLine ("Main class started\n");
 
+    // Let's create all instances
     // Students
     var student1 = new Student("Olli Oppija");
     var student2 = new Student("b");
@@ -14,10 +15,19 @@ class MainClass
     // student2.name = "Alli Alussa";
     // student3.name = "Kokki Kolmonen";
     Console.WriteLine("joo siis - " + student3.name);
+    student2.Tulosta("meeerkkijoonoo");
     // Teacher
     var teacher = new Teacher();
     Console.WriteLine($"Teacher: {teacher.teachername}");
     // teacher.TulostaJotain();
+    
+    var uprogram = new Uprogram("kjkniojhiuh");
+    // uprogram.name = "information technology";
+
+    var course = new Course();
+    // course.name = "Programming with C#";
+    
+    var degree = new Degree("Bachelor");
     
   }
 
@@ -26,18 +36,27 @@ class MainClass
   class Student
   {
       public string name;
+      private string tulostettava;
+
+      // If name given as parameter:
       public Student(string name)
       {
           this.name = name;
       }
+
+      // if name not given, set default:
       public Student()
       {
           this.name = "Default";
       }
-      //public string name;// { get; set; }
-}
 
-
+      // Tulostava metodi, muuten vaan
+      public void Tulosta(string tulostettava)
+      {
+          Console.WriteLine(tulostettava);
+      }
+      
+  }
 
   class Teacher
   {
@@ -47,4 +66,52 @@ class MainClass
     //       Console.WriteLine("Onnistuihan se");
     //   }
   }
+
+  class Uprogram
+  {
+      public string nimi;
+      public Uprogram(string nimi)
+      {
+          this.nimi = "information technology";
+      }
+  }
+  class Degree
+  {
+      private string name;
+      public Degree(string name)
+      {
+          this.name = name;
+      }
+  }
+  class Course
+  {
+      
+      private string name;
+      public Course()
+      {
+          this.name = "Programming with C#";
+      }
 }
+}
+
+
+// // Creates integer variable called "instances" and assigns value to 0
+// private static int instances = 0;
+
+// public Car()
+// {
+//     // Every time the constructor runs, increment "instances"
+//     instances++;
+// }
+
+// // Declare static member
+// public static int CountCars()
+// {
+//     return instances;
+// }
+
+// // Access static members
+// int carCount = Car.CountCars();
+
+// // Output to the console window
+// Console.WriteLine($"There are {carCount} cars on inventory right now.");
