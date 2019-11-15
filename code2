@@ -6,28 +6,36 @@ class MainClass
     Console.WriteLine ("Main class started\n");
 
     // Students
-    var student1 = new Student();
-    var student2 = new Student();
+    var student1 = new Student("Olli Oppija");
+    var student2 = new Student("b");
     var student3 = new Student();
-    student1.name = "Olli Oppija";
-    student2.name = "Alli Alussa";
-    student3.name = "Kokki Kolmonen";
-
-    // Student student4 = new Student("joopa joo");
+    //var student4 = new Student("Musta Hevonen");
+    // student1.name = "Olli Oppija";
+    // student2.name = "Alli Alussa";
+    // student3.name = "Kokki Kolmonen";
+    Console.WriteLine("joo siis - " + student3.name);
     // Teacher
     var teacher = new Teacher();
     Console.WriteLine($"Teacher: {teacher.teachername}");
     // teacher.TulostaJotain();
     
-
   }
 
 ////////////////////////////////////////////////////////////
 
   class Student
   {
-      public string name;// { get; set; }
-  }
+      public string name;
+      public Student(string name)
+      {
+          this.name = name;
+      }
+      public Student()
+      {
+          this.name = "Default";
+      }
+      //public string name;// { get; set; }
+}
 
 
 
