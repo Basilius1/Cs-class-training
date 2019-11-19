@@ -8,27 +8,32 @@ namespace Self_Assessment_Lab
     public class Student
     {
         public string Name { get; set; }
+        private static int instances = 0;
         public Student(string name)
         {
             this.Name = name;
+            instances++;
+        }
+        public static int CountStudents()
+        {
+            return instances;
         }
     }
     public class Teacher
     {
-        public string Opennimi { get; set; }
-        public Teacher(string opennimi)
+        public string Name { get; set; }
+        public Teacher(string name)
         {
-            this.Opennimi = opennimi;
+            this.Name = name;
         }
     }
     public class UProgram
     {
-        public string Nimi { get; set; }
-        public UProgram(string nimi)
+        public string Name { get; set; }
+        public UProgram(string name)
         {
-            this.Nimi = nimi;
+            this.Name = name;
         }
-        //public class Degree { }
 
     }
     public class Course
@@ -47,6 +52,4 @@ namespace Self_Assessment_Lab
             this.Arvonimi = arvonimi;
         }
     }
-
-    
 }
