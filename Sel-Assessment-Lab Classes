@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Self_Assessment_Lab
+{
+
+    public class Student
+    {
+        public string Name { get; set; }
+        public Student(string name)
+        {
+            this.Name = name;
+        }
+    }
+    public class Teacher
+    {
+        public string Opennimi { get; set; }
+        public Teacher(string opennimi)
+        {
+            this.Opennimi = opennimi;
+        }
+    }
+    public class UProgram
+    {
+        public string Nimi { get; set; }
+        public UProgram(string nimi)
+        {
+            this.Nimi = nimi;
+        }
+        //public class Degree { }
+
+    }
+    public class Course
+    {
+        public string Kurssi { get; set; }
+        public Course(string kurssi)
+        {
+            this.Kurssi = kurssi;
+        }
+    }
+    public class Degree
+    {
+        public string Arvonimi { get; set; }
+        public Degree(string arvonimi)
+        {
+            this.Arvonimi = arvonimi;
+        }
+    }
+
+    
+}
