@@ -1,0 +1,46 @@
+using System;
+
+namespace Self_Assessment_Lab
+{
+    //
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ohjelma alkaa -\n");
+            var uprogram = new UProgram("Information Technology");
+
+            var student1 = new Student("Olli Oppija");
+            var student2 = new Student("Allu Alussa");
+            var student3 = new Student("Pekka Puupaa");
+
+            var teacher = new Teacher("Carmen Ibarra");
+
+            var course = new Course("Programming with C#");
+        //
+        // For testing purposes:
+        Console.WriteLine(uprogram.Nimi);
+        Console.WriteLine(student3.Name);
+        Console.WriteLine(teacher.Opennimi);
+        Console.WriteLine(course.Kurssi);
+        }
+    }
+}
+/*
+In the Main() method of Program.cs
+
+Instantiate a UProgram object called Information Technology.
+Instantiate three Student objects.
+Instantiate a Course object called Programming with C#.
+Add your three students to this Course object.
+Instantiate at least one Teacher object.
+Add that Teacher object to your Course object.
+Instantiate a Degree object, such as Bachelor.
+Add your Course object to the Degree object.
+Instantiate a UProgram object called Information Technology.
+Add the Degree object to the UProgram object.
+Using Console.WriteLine statements, output the following information to the console window:
+The name of the program and the degree it contains
+The name of the course in the degree
+The count of the number of students in the course.
+*/
